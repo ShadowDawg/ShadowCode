@@ -2,6 +2,7 @@
 #define ll long long int
 #define pb(x) push_back(x)
 #define MOD 1000000007
+#define all(x) x.begin(),x.end()
 using namespace std;
 
 ll gcd (ll a,ll b) {
