@@ -5,6 +5,7 @@ vector <int> primes;
 
 void sieve () {
 	is_prime[0] = is_prime[1] = false;
+	spf[1] = 1;
 	for (int i = 2;i < N;++i) {
 		if (is_prime[i]) {
 			spf[i] = i;
