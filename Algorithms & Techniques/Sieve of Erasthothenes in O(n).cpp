@@ -1,5 +1,5 @@
 const int N = 10000001;
-bool is_prime[N] = {true};
+vector <bool> is_prime(N,true);
 int spf[N] = {0};   // smallest prime factor
 vector <int> primes;
 
