@@ -50,7 +50,7 @@ int range_sum (int v,int tl,int tr,int l,int r,int i) {
 			lazy[i][v * 2] = !lazy[i][v * 2];
 			lazy[i][v * 2 + 1] = !lazy[i][v * 2 + 1];
 		}
-		lazy[i][v] = 0;
+		lazy[i][v] = false;
 	}
 	if (tl >= l && tr <= r) 
 		return st[i][v];

@@ -13,7 +13,7 @@ ll gcd (ll a,ll b) {
 }
 
 ll lcm (ll a,ll b) {
-	return (a * b) / gcd(a,b);
+	return (a / gcd(a,b)) * b;
 }
 
 ll digit_sum (ll n) {
@@ -26,7 +26,7 @@ ll digit_sum (ll n) {
 }
 
 bool is_prime (ll n) {
-	bool p{true};
+	if (n <= 1) return false;
 	for (ll i{2};i * i <= n;++i) {
 		if (n % i == 0) {
 			p = false;
@@ -73,7 +73,7 @@ ll npr (int n,int r,ll m) {
 	// NOTE: precompute factorials & inverses for multiple testcases / iterations
 	if (r < 0 || r > n)
 		return 0;
-	return (factorial_mod(n,m) * mod_inverse(factorial_mod(n - r,m),m)) % MOD;
+	return (factorial_mod(n,m) * mod_inverse(factorial_mod(n - r,m),m)) % m;
 }
 
 
